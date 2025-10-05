@@ -12,13 +12,12 @@
    nix.settings.experimental-features = [ "nix-command" "flakes" ];
    boot.kernelPackages = pkgs.linuxPackages_6_6;
 
-  # Create a personal user account
+ 
   users.users.l9barack =
     { isNormalUser = true;
-    extraGroups = [ "wheel" ]; # For sudo access
+    extraGroups = [ "wheel" ];
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM4dAlAT5/Lk5KcCicLwzxvHpAgNZuTG6LJxJ7nAbLZy my-pc-key"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIbtKZkhlPRD0sWhb4nfQJNwErPjQW2RCffdeKipb+UU ShellFish@iPad-24092025"
+
     ];
   };
 
@@ -38,8 +37,6 @@
     git
     zellij
     vim
-    
-    #CLI Tools
     curl
     wget
     bat
@@ -50,8 +47,6 @@
     tldr
     dust
     zoxide
-
-    # Language Toolchains
     jdk
   ];
 
@@ -62,8 +57,7 @@
   networking.domain = "";
   services.openssh.enable = true;
   users.users.root.openssh.authorizedKeys.keys = [
-     ''ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM4dAlAT5/Lk5KcCicLwzxvHpAgNZuTG6LJxJ7nAbLZy''
-     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIbtKZkhlPRD0sWhb4nfQJNwErPjQW2RCffdeKipb+UU ShellFish@iPad-24092025" 
+ 
    ];
 
   system.stateVersion = "25.05";
