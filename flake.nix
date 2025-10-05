@@ -1,5 +1,5 @@
 {
-  description = "NixOS + Home Manager setup for cloud dev workstation";
+  description = "NixOS vm";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
@@ -43,7 +43,6 @@
         }
       ];
 
-      # Ensure pkgs consistency through specialArgs, not via nixpkgs arg
       specialArgs = {
         inherit pkgs;
       };
