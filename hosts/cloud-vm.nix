@@ -24,7 +24,6 @@
 
   security.sudo.wheelNeedsPassword = false;
 
-  # Disable root login with password for better security
   services.openssh.settings.PermitRootLogin = "prohibit-password";
 
   programs.zsh.enable = true;
