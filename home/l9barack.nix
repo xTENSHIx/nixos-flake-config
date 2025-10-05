@@ -19,7 +19,7 @@
 
   programs.zellij.enable = true;
 
- # Add some aliases
+
   home.shellAliases = {
     ll = "lsd -l";
     la = "lsd -la";
@@ -30,10 +30,7 @@
 #  programs.doom-emacs = {
  #   enable = true;
   #  doomDir = "${config.xdg.configHome}/doom";
-    # Optional, but recommended: make sure the runtime write area is outside the store
    # doomLocalDir = "${config.xdg.dataHome}/doom";
-  
-    # If you also want this to provide `emacs` directly:
     #provideEmacs = true;
   #};
 
